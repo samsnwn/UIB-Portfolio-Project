@@ -13,11 +13,12 @@ $clr-dark:              #240046;
 
 
 $clr-text:              #f9f4f5;
-$clr-bg-grad:           linear-gradient(to right, #eaafc8, #654ea3);
+$clr-bg-grad:           linear-gradient(to right, #5d5d81, #3b3355);
 $clr-bg-grad2:          linear-gradient(to right, #4568dc, #b06ab3);
 $clr-bg-grad3:          linear-gradient(to right, #ff9e00, #ff6d00);
+$clr-bg-grad4:          linear-gradient(to right, hsl(351, 17%, 54%), hsl(350, 40%, 45%));
 
-$clr-warning:           #ff9e00;
+$clr-warning:           hsl(350, 40%, 45%);
 $clr-warning-mid:       #ff8500;
 $clr-warning-dark:      #ff6d00;
 

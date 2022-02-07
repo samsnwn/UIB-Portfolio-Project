@@ -2,14 +2,15 @@
 header {
   width: 100%;
   height: 110vh;
-  background: $clr-bg-grad;
+  background-image:  url("../images/image-from-rawpixel-id-3989328-original.png"), $clr-bg-grad;
   position: relative;
   h2 {
+        font-family: 'Oswald', sans-serif;
       font-size: $font-size-l;
       margin-bottom: 2rem;
       -webkit-animation: text-shadow-drop-center 1.6s both;
       animation: text-shadow-drop-center 1.6s both;
-    }   
+    color: hsl(350, 40%, 45%);    }   
   nav {
     width: 100%;
     padding: $spacer-l;
@@ -17,19 +18,20 @@ header {
     flex-direction: column;
     align-items: center;
     ul {
+        font-family: 'Oswald', sans-serif;
       @include lists;
       margin-top: $spacer-m;
       a {
           font-size: 1.5rem;
           @include hover-lift();
           &:hover {
-              color: $clr-purple1;
+              color: $clr-warning;
           }
         }
     }
   }
   .heading {
-    margin-top: 7rem;
+    margin-top: 25rem;
     text-align: center;
     h1 {
         -webkit-text-stroke: 1px rgb(168, 168, 168);
@@ -43,11 +45,11 @@ header {
 	        animation: text-pop-up-top 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     }
     h3 {
-      @include fonts($font-size-m, 700, $clr-purple3);
+      @include fonts($font-size-m, 700, $clr-text);
       margin-top: $spacer-sm;
     }
     .button {
-      background: $clr-bg-grad3;
+      background: hsl(350, 40%, 45%);
       padding: $spacer-sm;
       margin-top: $spacer-xl;
       border-radius: 8px;
@@ -72,6 +74,7 @@ header {
 
 
 // SKILLS SECTION
+
 #skills {
   margin-top: $spacer-l;
   padding-bottom: double($spacer-xl);
@@ -80,7 +83,7 @@ header {
 // PROJECTS SECTION
 #projects {
   width: 100%;
-  background: $clr-bg-grad;
+  background-image:  url("../images/image-from-rawpixel-id-3989328-original.png"), $clr-bg-grad;
   .wave {
       .one {
         width: 100%;
@@ -114,7 +117,7 @@ header {
             border: 2px solid purple;
         }
         &[type="submit"] {
-            background: $clr-bg-grad3;
+            background: $clr-bg-grad4;
             color: $clr-text;
             cursor: pointer;
         }
@@ -135,7 +138,7 @@ header {
             margin: $spacer-xs 0;
         }
         .fa {
-            color: $clr-purple3;
+            color: $clr-warning;
         }
         span {
             font-weight: 700;
@@ -195,7 +198,7 @@ footer {
 @media all and (min-width:678px) {
     header {
         h1 {
-            @include block-center(70%);
+            @include block-center(90%);
         }
     }
 
@@ -220,7 +223,7 @@ footer {
     }
     #contact {
 
-        @include block-center(70%);
+        @include block-center(80%);
 
         .contact-container {
             justify-content: space-between;
@@ -282,5 +285,11 @@ footer {
         .project-cards {
             width: 60%;
         }
+    }
+}
+
+.wave {
+    img {
+        background-image:  url("../images/image-from-rawpixel-id-3989328-original.png") center / cover, $clr-bg-grad;
     }
 }
