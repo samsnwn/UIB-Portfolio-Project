@@ -1,0 +1,79 @@
+// centering on grid container
+@mixin grid-center($height) {
+  height: $height;
+  display: grid;
+  place-items: center;
+}
+
+// centering on flex container
+@mixin flex-center($height, $align-items: center) {
+  height: $height;
+  display: flex;
+  justify-content: center;
+  align-items: $align-items;
+}
+
+// centering with block elements
+@mixin block-center($width) {
+  width: $width;
+  margin: 0 auto;
+}
+
+// reset lists
+@mixin lists {
+  list-style-type: none;
+  display: flex;
+  a {
+    text-decoration: none;
+    color: $clr-text;
+    padding: $spacer-sm;
+  }
+}
+
+// Fonts
+@mixin fonts($font-size, $font-weight, $color) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  color: $color;
+}
+
+// Box styling
+
+@mixin box {
+  padding: $spacer-xl;
+  margin: $spacer-l auto;
+  border-radius: 8px;
+  background: linear-gradient(225deg, #f0f0f0, #e0e0e0);
+  box-shadow: -15px 15px 20px #bebebe, 15px -15px 20px #ffffff;
+}
+
+// Button hover
+@mixin after($content: "", $pos: absolute) {
+  position: relative;
+
+  &::after {
+    content: $content;
+    position: $pos;
+    @content;
+  }
+}
+
+@mixin hover-lift() {
+  transition: transform 350ms ease-in-out;
+  box-shadow: 0 0.25em 0.5em rgba (#000000, 0.2);
+
+  @include after() {
+    box-shadow: 0 0 1.25em 0 rgba(black, 0.4);
+    transition: transform 350ms ease-in-out;
+    opacity: 0;
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+
+    &::after {
+      opacity: 1;
+    }
+  }
+}

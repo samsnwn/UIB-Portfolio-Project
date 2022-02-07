@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&family=Roboto:wght@100;300;400;700&family=Rock+Salt&display=swap");
+@import "variables";
+@import "reset";
+@import "mixins";
+@import "functions";
+@import "layout";
+@import "components";
+@import "keyframes";
+
+
+h2 {
+    text-align: center;
+    @include fonts($font-size-l, 700, $clr-warning);
+    margin-top: $spacer-m;
+  }

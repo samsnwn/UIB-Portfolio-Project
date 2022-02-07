@@ -1,0 +1,286 @@
+// HEADER
+header {
+  width: 100%;
+  height: 110vh;
+  background: $clr-bg-grad;
+  position: relative;
+  h2 {
+      font-size: $font-size-l;
+      margin-bottom: 2rem;
+      -webkit-animation: text-shadow-drop-center 1.6s both;
+      animation: text-shadow-drop-center 1.6s both;
+    }   
+  nav {
+    width: 100%;
+    padding: $spacer-l;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    ul {
+      @include lists;
+      margin-top: $spacer-m;
+      a {
+          font-size: 1.5rem;
+          @include hover-lift();
+          &:hover {
+              color: $clr-purple1;
+          }
+        }
+    }
+  }
+  .heading {
+    margin-top: 7rem;
+    text-align: center;
+    h1 {
+        -webkit-text-stroke: 1px rgb(168, 168, 168);
+      font-size: 5rem;
+      font-weight: 700;
+      color: $clr-text;
+      line-height: 0.9;
+      letter-spacing: 2px;
+      text-shadow: 1px 5px 3px rgb(15, 15, 15);
+      -webkit-animation: text-pop-up-top 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: text-pop-up-top 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+    h3 {
+      @include fonts($font-size-m, 700, $clr-purple3);
+      margin-top: $spacer-sm;
+    }
+    .button {
+      background: $clr-bg-grad3;
+      padding: $spacer-sm;
+      margin-top: $spacer-xl;
+      border-radius: 8px;
+      cursor: pointer;
+      text-transform: uppercase;
+      @include fonts(1.3rem, 700, $clr-text);
+      @include hover-lift();
+      box-shadow: -11px 17px 19px 0px rgba(0,0,0,0.39);
+      &:active {
+        transform: scale(1);
+        box-shadow: -9px 15px 19px 0px rgba(0,0,0,0.39);
+
+      }
+    }
+  }
+  img {
+      width: 100%;
+      position: absolute;
+      bottom: 0%;
+  }
+}
+
+
+// SKILLS SECTION
+#skills {
+  margin-top: $spacer-l;
+  padding-bottom: double($spacer-xl);
+}
+
+// PROJECTS SECTION
+#projects {
+  width: 100%;
+  background: $clr-bg-grad;
+  .wave {
+      .one {
+        width: 100%;
+        transform: rotate(180deg);
+      }
+      .two {
+        width: 100%;
+        transform: translateY(3px);   
+    }
+  }
+}
+
+// CONTACT SECTION
+#contact {
+    padding: 10rem 0 15rem;
+}
+.contact-container {
+    width: 80%;
+    padding: $spacer-sm !important ;
+    @include box;
+    @include flex-center(100%);
+    form {
+        padding: $spacer-sm;
+    }
+    input {
+        width: 90%;
+        border: 1px solid rgb(228, 228, 228);
+        padding: $spacer-sm;
+        border-radius: 5px;
+        &:focus {
+            border: 2px solid purple;
+        }
+        &[type="submit"] {
+            background: $clr-bg-grad3;
+            color: $clr-text;
+            cursor: pointer;
+        }
+    }
+    textarea {
+        resize: none;
+        @extend input;
+    }
+    .contact-info {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        flex: 0 1 50%;
+        font-size: $font-size-sm;
+        padding: $spacer-m 0;
+        line-height: 1.7;
+        div {
+            margin: $spacer-xs 0;
+        }
+        .fa {
+            color: $clr-purple3;
+        }
+        span {
+            font-weight: 700;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        .hide {
+            display: none;
+        }
+    }
+}
+
+// FOOTER
+footer {
+    width: 100%;
+    height: fi;
+    background: $clr-bg-grad;
+    text-align: center;
+    
+    h3 {
+        font-size: $font-size-m;
+        color: $clr-text;
+        margin-top: $spacer-m;
+        padding-bottom: $spacer-m;
+    }
+    img {
+        width: 100%;
+        transform: rotate(180deg);
+    }
+
+    a{
+        color: $clr-text;
+        font-size: $font-size-l;
+        padding-left: 1rem;
+        i {
+            padding-bottom: $spacer-l;
+        }
+    }
+}
+
+
+// Breakpoints
+@media all and (min-width:450px) {
+    header {
+        .heading {
+            h1 {
+                @include block-center(80%);
+                font-size: 7rem;
+            }
+
+        }
+    }
+}
+
+@media all and (min-width:678px) {
+    header {
+        h1 {
+            @include block-center(70%);
+        }
+    }
+
+    #skills {
+        @include block-center(80%);
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: $spacer-l;
+            .card {
+                width: 100%;
+                .back {
+                    padding: 0;
+                }
+            }
+        }
+    }
+    #projects {
+        .project-cards {
+            align-items: center;
+        }
+    }
+    #contact {
+
+        @include block-center(70%);
+
+        .contact-container {
+            justify-content: space-between;
+
+            form {
+                flex-grow: 2;
+            }
+        }
+
+        .hide {
+            display: block;
+        }
+
+        .show {
+            display: none;
+        }
+    }
+}
+
+@media all and (min-width: 992px) {
+    header {
+        padding-top: $spacer-l;
+        .heading {
+            h1 {
+                @include block-center(40%);
+                font-size: 8rem;
+                margin-top: double($spacer-xl);
+                width: 70%;
+            }
+            h2 {
+                vertical-align: middle;
+                font-size: $font-size-xl;
+            }
+        }
+
+        nav {
+            @include block-center(60%);
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0;
+            ul {
+                @include flex-center(100%);
+                align-items: center;
+                margin-top: 0;
+            }
+        }
+    }
+
+
+    #skills {
+        width: 80%;
+        .cards-container {
+            grid-template-columns: repeat(3, 1fr);
+            gap: $spacer-l;
+        }
+    }
+
+    #projects {
+        .project-cards {
+            width: 60%;
+        }
+    }
+}
