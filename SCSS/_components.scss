@@ -8,7 +8,6 @@
   text-transform: uppercase;
   z-index: 2;
 
-
   a {
     text-decoration: none;
     color: $clr-text;
@@ -18,92 +17,30 @@
   }
 }
 
-// CIRCLES
-.circle-container {
-  height: 200px;
-  @include block-center(70%);
-  margin-top: $spacer-xl;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-
-
-  .circle {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    box-shadow: 1px 5px 10px rgba(63, 47, 47, 0.397);
-  }
-  
-  .one {
-    // background: #4a4e69;
-    background: radial-gradient(circle at 50% 120%, #81e8f6, #76deef 10%, #055194 80%, #062745 100%);
-    -webkit-animation: circle-one-front 5s infinite both;
-  animation: circle-one-front 5s infinite both;
-  }
-
-  @keyframes ball-one-front {
-    0% {
-      transform: translate(-250px, -250px);
-    }
-
-    100% {
-      transform: translate(0px, 0px);
-    }
-  }
-  .two {
-    // background: #b7094c;
-    background: radial-gradient(circle at 50% 100%, #81e8f6, #76deef 10%, #055194 80%, #062745 100%);
-  }
-  .three {
-    // background: #723c70;
-    background: radial-gradient(circle at 50% 120%, #81e8f6, #76deef 10%, #055194 80%, #062745 100%);
-  }
-  .four {
-    // background: #0091ad;
-    background: radial-gradient(circle at 50% 120%, #81e8f6, #76deef 10%, #055194 80%, #062745 100%);
-  }
-  .five {
-    // background: #22223b;
-    background: radial-gradient(circle at 50% 120%, #81e8f6, #76deef 10%, #055194 80%, #062745 100%);
-  }
-  .six {
-    // background: #5390d9;
-    background: radial-gradient(circle at 50% 120%, #81e8f6, #76deef 10%, #055194 80%, #062745 100%);
-  }
-  
-}
 @keyframes ball-two-back {
-    0% {
-      transform: translate(0px, 0px);
-    }
-    
-    50% {
-      transform: translate(250px, -250px);
-    }
-    100% {
-      transform: translate(0px, 0px);
-    }
+  0% {
+    transform: translate(0px, 0px);
   }
 
-
-
-
-
+  50% {
+    transform: translate(250px, -250px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
 
 // SKILL CARDS
 .card {
   background: linear-gradient(315deg, #cacaca, #f0f0f0);
-box-shadow:  -5px -5px 10px #c5c5c5,
-             5px 5px 10px #fbfbfb;
+  box-shadow: -5px -5px 10px #c5c5c5, 5px 5px 10px #fbfbfb;
   width: 60%;
   min-height: fit-content;
   -webkit-animation: shadow-drop-2-center-out 0.4s
-  cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: shadow-drop-2-center-out 0.4s cubic-bezier(0.25, 0.46, 0.95, 0.94)
-  both;
-  
+    both;
+
   div {
     -webkit-animation: text-blur-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53)
       both;
@@ -144,7 +81,7 @@ box-shadow:  -5px -5px 10px #c5c5c5,
       justify-content: center;
       gap: 1rem;
       -webkit-animation: text-blur-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53)
-      both;
+        both;
       animation: text-blur-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
       p {
         font-size: $font-size-xs;

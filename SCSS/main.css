@@ -25,7 +25,7 @@ header {
 }
 
 header h2 {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 3rem;
   margin-bottom: 2rem;
   -webkit-animation: text-shadow-drop-center 1.6s both;
@@ -49,7 +49,7 @@ header nav {
 }
 
 header nav ul {
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -183,6 +183,10 @@ header img {
   padding-bottom: 10rem;
 }
 
+#skills .back div p {
+  font-weight: bold;
+}
+
 #projects {
   width: 100%;
   background-image: url("../images/image-from-rawpixel-id-3989328-original.png"), -webkit-gradient(linear, left top, right top, from(#5d5d81), to(#3b3355));
@@ -199,6 +203,7 @@ header img {
   width: 100%;
   -webkit-transform: translateY(3px);
           transform: translateY(3px);
+  margin-top: 10rem;
 }
 
 #contact {
@@ -292,9 +297,8 @@ header img {
 
 footer {
   width: 100%;
-  height: fi;
-  background: -webkit-gradient(linear, left top, right top, from(#5d5d81), to(#3b3355));
-  background: linear-gradient(to right, #5d5d81, #3b3355);
+  background-image: url("../images/image-from-rawpixel-id-3989328-original.png"), -webkit-gradient(linear, left top, right top, from(#5d5d81), to(#3b3355));
+  background-image: url("../images/image-from-rawpixel-id-3989328-original.png"), linear-gradient(to right, #5d5d81, #3b3355);
   text-align: center;
 }
 
@@ -454,80 +458,6 @@ footer a i {
   background: -webkit-gradient(linear, left top, right top, from(#9e767c), to(#a14554));
   background: linear-gradient(to right, #9e767c, #a14554);
   border-radius: 10px;
-}
-
-.circle-container {
-  height: 200px;
-  width: 70%;
-  margin: 0 auto;
-  margin-top: 5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.circle-container .circle {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  -webkit-box-shadow: 1px 5px 10px rgba(63, 47, 47, 0.397);
-          box-shadow: 1px 5px 10px rgba(63, 47, 47, 0.397);
-}
-
-.circle-container .one {
-  background: radial-gradient(circle at 50% 120%, #81e8f6, #76deef 10%, #055194 80%, #062745 100%);
-  -webkit-animation: circle-one-front 5s infinite both;
-  animation: circle-one-front 5s infinite both;
-}
-
-@-webkit-keyframes ball-one-front {
-  0% {
-    -webkit-transform: translate(-250px, -250px);
-            transform: translate(-250px, -250px);
-  }
-  100% {
-    -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
-  }
-}
-
-@keyframes ball-one-front {
-  0% {
-    -webkit-transform: translate(-250px, -250px);
-            transform: translate(-250px, -250px);
-  }
-  100% {
-    -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
-  }
-}
-
-.circle-container .two {
-  background: radial-gradient(circle at 50% 100%, #81e8f6, #76deef 10%, #055194 80%, #062745 100%);
-}
-
-.circle-container .three {
-  background: radial-gradient(circle at 50% 120%, #81e8f6, #76deef 10%, #055194 80%, #062745 100%);
-}
-
-.circle-container .four {
-  background: radial-gradient(circle at 50% 120%, #81e8f6, #76deef 10%, #055194 80%, #062745 100%);
-}
-
-.circle-container .five {
-  background: radial-gradient(circle at 50% 120%, #81e8f6, #76deef 10%, #055194 80%, #062745 100%);
-}
-
-.circle-container .six {
-  background: radial-gradient(circle at 50% 120%, #81e8f6, #76deef 10%, #055194 80%, #062745 100%);
 }
 
 @-webkit-keyframes ball-two-back {
