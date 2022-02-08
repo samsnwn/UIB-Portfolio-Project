@@ -1,3 +1,9 @@
+h2 {
+  text-align: center;
+  @include fonts($font-size-l, 700, $clr-warning);
+  margin-top: $spacer-xl;
+}
+
 // BTN
 .btn {
   position: fixed;
@@ -17,29 +23,18 @@
   }
 }
 
-@keyframes ball-two-back {
-  0% {
-    transform: translate(0px, 0px);
-  }
-
-  50% {
-    transform: translate(250px, -250px);
-  }
-  100% {
-    transform: translate(0px, 0px);
-  }
-}
 
 // SKILL CARDS
 .card {
+  min-height: fit-content;
+  width: 60%;
   background: linear-gradient(315deg, #cacaca, #f0f0f0);
   box-shadow: -5px -5px 10px #c5c5c5, 5px 5px 10px #fbfbfb;
-  width: 60%;
-  min-height: fit-content;
   -webkit-animation: shadow-drop-2-center-out 0.4s
-    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: shadow-drop-2-center-out 0.4s cubic-bezier(0.25, 0.46, 0.95, 0.94)
-    both;
+  both;
+  @include box;
 
   div {
     -webkit-animation: text-blur-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53)
@@ -49,7 +44,6 @@
     height: 15vh;
     text-align: center;
   }
-  @include box;
   .back {
     display: none;
     img {
@@ -78,7 +72,7 @@
     }
     .back {
       display: flex;
-      justify-content: center;
+      justify-content: space-evenly;
       gap: 1rem;
       -webkit-animation: text-blur-in 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53)
         both;
@@ -98,7 +92,7 @@
   @include block-center(70%);
   margin: $spacer-l auto;
   height: fit-content;
-  background: $clr-text;
+  background: linear-gradient(315deg, #cacaca, #f0f0f0);
   display: flex;
   border-radius: 8px;
   background: linear-gradient(225deg, #ffffff, $clr-text);

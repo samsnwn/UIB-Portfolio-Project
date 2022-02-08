@@ -10,7 +10,9 @@ $clr-purple6:           #4361ee;
 $clr-blue:              #4895ef;
 $clr-lightblue:         #4cc9f0;
 $clr-dark:              #240046;
-
+$clr-warning:           hsl(350, 40%, 45%);
+$clr-warning-mid:       #ff8500;
+$clr-warning-dark:      #ff6d00;
 
 $clr-text:              #f9f4f5;
 $clr-bg-grad:           linear-gradient(to right, #5d5d81, #3b3355);
@@ -18,14 +20,12 @@ $clr-bg-grad2:          linear-gradient(to right, #4568dc, #b06ab3);
 $clr-bg-grad3:          linear-gradient(to right, #ff9e00, #ff6d00);
 $clr-bg-grad4:          linear-gradient(to right, hsl(351, 17%, 54%), hsl(350, 40%, 45%));
 
-$clr-warning:           hsl(350, 40%, 45%);
-$clr-warning-mid:       #ff8500;
-$clr-warning-dark:      #ff6d00;
 
 // Fonts
 $font-family-primary:   'Roboto', sans-serif;
 $font-family-secondary: 'Montserrat', sans-serif;
 $font-family-name:      'Rock Salt', cursive;
+$font-family-main:      'Oswald', sans-serif;
 
 $font-size-xs:          0.8rem;
 $font-size-sm:          1.1rem;

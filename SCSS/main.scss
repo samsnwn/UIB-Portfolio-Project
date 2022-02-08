@@ -9,8 +9,4 @@
 @import "keyframes";
 
 
-h2 {
-    text-align: center;
-    @include fonts($font-size-l, 700, $clr-warning);
-    margin-top: $spacer-m;
-  }
+
